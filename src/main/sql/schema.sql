@@ -111,7 +111,7 @@ SELECT order_status , count(*) from orders WHERE order_status = 'Shipped';
 SELECT avg(buy_price), avg(buy_price * 12) FROM products;
 
 --Using INNER JOIN create a query that selects all Payments with Customer information.
-SELECT customer.customer_id, first_name, last_name, email, amount, payment_date FROM customer INNER JOIN payment ON payment.customer_id = customer.customer_id;
+SELECT customers.customer_id, first_name, last_name, email, amount, payment_date FROM customers INNER JOIN payment ON payment.customer_id = customers.customer_id;
 
 --Select all products that have turnable front wheels
 SELECT * FROM products WHERE description = 'Turnable front wheels, steering function';
